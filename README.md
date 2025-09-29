@@ -12,6 +12,14 @@ El objetivo principal es empoderar a los agricultores con una herramienta accesi
 - Interfaz sencilla y amigable para agricultores con baja experiencia tecnológica.
 - Versión gratuita con límite de fotos y planes premium para uso extendido.
 
+  ## ⚙️ Funcionalidades implementadas
+- Captura de foto con la cámara.
+- Subida de imágenes desde la galería.
+- Interfaz de resultados con diagnóstico simulado.
+- Limitación de fotos en el plan gratuito.
+- Navegación básica entre pantallas.
+
+
 ---
 
 ## 📋 Requisitos Previos
@@ -27,3 +35,4 @@ El objetivo principal es empoderar a los agricultores con una herramienta accesi
    ```bash
    git clone https://github.com/usuario/ecoshift.git
    cd ecoshift
+
