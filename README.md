@@ -1,30 +1,16 @@
-# 🌱 EcoShift
+# flutter_application_1
 
-EcoShift es una aplicación móvil desarrollada en **Flutter** que ayuda a los agricultores nicaragüenses de frijol a detectar plagas y enfermedades en sus cultivos mediante el uso de **modelos de Inteligencia Artificial**.  
-El objetivo principal es empoderar a los agricultores con una herramienta accesible, práctica y confiable para mejorar la salud de sus cultivos y garantizar la seguridad alimentaria.
+A new Flutter project.
 
----
+## Getting Started
 
-## 🚀 Características
-- Subir fotos de plantas de frijol desde la cámara o galería.
-- Diagnóstico preliminar de plagas o enfermedades mediante IA.
-- Recomendaciones prácticas para el cuidado y tratamiento del cultivo.
-- Interfaz sencilla y amigable para agricultores con baja experiencia tecnológica.
-- Versión gratuita con límite de fotos y planes premium para uso extendido.
+This project is a starting point for a Flutter application.
 
----
+A few resources to get you started if this is your first Flutter project:
 
-## 📋 Requisitos Previos
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) (versión 3.0 o superior).
-- Dart SDK.
-- Android Studio o Visual Studio Code con las extensiones de Flutter y Dart.
-- Un dispositivo Android o emulador configurado.
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
----
-
-## 🔧 Instalación y Ejecución
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/usuario/ecoshift.git
-   cd ecoshift
-
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
