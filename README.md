@@ -50,90 +50,85 @@ erDiagram
     USERS ||--o{ USAGE_LOGS : "registra"
 
     USERS {
-      uuid id PK
-      text full_name
-      text email
-      text phone
-      text role "farmer|tech|admin"
-      text plan_code "FREE|BASIC|PRO"
-      timestamptz created_at
-      timestamptz updated_at
+      int id PK
+      string full_name
+      string email
+      string phone
+      string role
+      string plan_code
+      datetime created_at
+      datetime updated_at
     }
 
     PLANS {
-      uuid id PK
-      text code "FREE|BASIC|PRO" UNIQUE
+      int id PK
+      string code
       int monthly_photo_limit
-      numeric price_usd
+      float price_usd
       boolean is_active
-      jsonb features
-      timestamptz created_at
-      timestamptz updated_at
+      datetime created_at
+      datetime updated_at
     }
 
     SUBSCRIPTIONS {
-      uuid id PK
-      uuid user_id FK
-      uuid plan_id FK
-      timestamptz start_date
-      timestamptz end_date
-      text status "active|past_due|canceled|expired"
-      text provider "stripe|internal"
-      text provider_ref
-      timestamptz created_at
-      timestamptz updated_at
+      int id PK
+      int user_id FK
+      int plan_id FK
+      datetime start_date
+      datetime end_date
+      string status
+      string provider
+      string provider_ref
+      datetime created_at
+      datetime updated_at
     }
 
     PHOTOS {
-      uuid id PK
-      uuid user_id FK
-      text storage_path
-      text source "camera|gallery"
-      text note
-      timestamptz taken_at
-      timestamptz uploaded_at
+      int id PK
+      int user_id FK
+      string storage_path
+      string source
+      datetime taken_at
+      datetime uploaded_at
     }
 
     ANALYSES {
-      uuid id PK
-      uuid photo_id FK UNIQUE
-      uuid user_id FK
-      uuid condition_id FK
-      numeric confidence "0.000–1.000"
-      text status "ok|failed|pending"
-      text advice_summary
-      jsonb model_meta
-      timestamptz created_at
+      int id PK
+      int photo_id FK
+      int user_id FK
+      int condition_id FK
+      float confidence
+      string status
+      string advice_summary
+      datetime created_at
     }
 
     CONDITIONS {
-      uuid id PK
-      text code UNIQUE
-      text name
-      text type "disease|pest|deficiency"
-      text crop "bean"
-      text severity_scale "low|med|high"
-      text description
+      int id PK
+      string code
+      string name
+      string type
+      string crop
+      string severity_scale
+      string description
     }
 
     RECOMMENDATIONS {
-      uuid id PK
-      uuid condition_id FK
-      text title
-      text body
-      text category "cultural|biologic|chemical|irrigation"
-      text region "NI|CA|GLOBAL"
-      jsonb safety_notes
+      int id PK
+      int condition_id FK
+      string title
+      string body
+      string category
+      string region
       boolean active
     }
 
     USAGE_LOGS {
-      uuid id PK
-      uuid user_id FK
-      text action "photo_analyzed"
+      int id PK
+      int user_id FK
+      string action
       int quantity
-      timestamptz occurred_at
-      jsonb meta
+      datetime occurred_at
     }
 
 
